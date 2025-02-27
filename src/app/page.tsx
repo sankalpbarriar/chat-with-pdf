@@ -12,35 +12,35 @@ import Link from "next/link";
 
 const features = [
   {
-    name: "Store your pdf documents",
-    description: "Keep all your important PDF files securely stored and easily accesible anytime, anywhere.",
+    name: "Secure PDF Storage",
+    description: "Store your important PDF documents securely in the cloud, ensuring safe and reliable access anytime.",
     icon: GlobeIcon
   },
   {
-    name: "Store your pdf documents",
-    description: "Keep all your important PDF files securely stored and easily accesible anytime, anywhere.",
+    name: "AI-Powered Insights",
+    description: "Leverage advanced AI to organize, search, and retrieve your PDFs with ease.",
     icon: BrainCogIcon
   },
   {
-    name: "Cloud Backup",
-    description: "Keep all your important PDF files securely stored and easily accesible anytime, anywhere.",
+    name: "Cloud Backup & Sync",
+    description: "Automatically back up your PDFs and sync them across all your devices effortlessly.",
     icon: EyeIcon
   },
   {
-    name: "Responsive across devices",
-    description: "Keep all your important PDF files securely stored and easily accesible anytime, anywhere.",
+    name: "Cross-Device Compatibility",
+    description: "Access your PDFs seamlessly on desktop, tablet, and mobile with a fully responsive design.",
     icon: ZapIcon
   },
   {
-    name: "Store your pdf documents",
-    description: "Keep all your important PDF files securely stored and easily accesible anytime, anywhere.",
+    name: "Advanced File Management",
+    description: "Organize your PDFs with intelligent categorization and a user-friendly interface.",
     icon: ServerCogIcon
   },
   {
-    name: "Store your pdf documents",
-    description: "Keep all your important PDF files securely stored and easily accesible anytime, anywhere.",
+    name: "Lightning-Fast Performance",
+    description: "Experience rapid uploads, instant previews, and smooth navigation for an efficient workflow.",
     icon: MonitorSmartphoneIcon
-  },
+  }
 ]
 
 export default function Home() {
@@ -81,7 +81,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <Image
               alt="App screenshot"
-              src="https://i.ibb.co/dwfxqjWF/VciRSTI.jpg"
+              src="https://i.ibb.co/sp8x9qBW/Screen-Shot-2025-02-27-at-22-08-14.png"
               width={2432}
               height={1442}
               className="mb-[-0%] rounded-xl shadow-3xl ring-1 ring-gray-900/10"

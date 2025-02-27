@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className="flex justify-between bg-white shadow-sm p-5 border-b">
         <Link href='/dashboard' className="text-2xl">
-        Chat to <span className="text-blue-600">PDF</span>
+        <span className="text-blue-600">PDF</span> Speek Pro
         </Link>
         <SignedIn>
             <div className="flex items-center space-x-2">

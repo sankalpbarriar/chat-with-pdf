@@ -5,9 +5,12 @@ import { useDropzone } from "react-dropzone";
 import { CheckCircleIcon, CircleArrowDown, HammerIcon, RocketIcon, SaveIcon } from "lucide-react"
 import useUpload, { StatusText } from "../../hooks/useUpload";
 import { useRouter } from "next/navigation";
+import useSubscription from "../../hooks/useSubsription";
+import { toast } from "@/components/ui/use-toast";
 function FileUploader() {
     const { progress, status, fileId, handleUpload } = useUpload();   //custom hook
     const router = useRouter();
+    const {isOverFileLimit,filesLoading} = useSubscription();
 
     //redirect user when fileUpload is completed
     useEffect(() => {
@@ -19,14 +22,24 @@ function FileUploader() {
         //to do something with the files
         const file = acceptedFiles[0]; //gett the first file
         if (file) {
-            await handleUpload(file)
+            if(!isOverFileLimit && !filesLoading){
+                await handleUpload(file)
+            }
+            else{
+                toast({
+                    variant:"destructive",
+                    title:"Free Plan file limit Reached",
+                    description:
+                    "You have reached the limit of files for your account. Please upgrade"
+                })
+            }
         }
         else {
             //do nothing..
             //toast..
         }
 
-    }, [handleUpload])
+    }, [handleUpload , isOverFileLimit,filesLoading,toast])
 
     const statusIcons: {
         //@ts-expect-error  : should be of another data type

@@ -1,4 +1,4 @@
-import { put } from "@vercel/blob";
+import { del, put } from "@vercel/blob";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -29,6 +29,28 @@ export async function POST(req: Request) {
       {
         status: 500,
       }
+    );
+  }
+}
+
+export async function DELETE(req: Request) {
+  try {
+    const { url } = await req.json();
+
+    if (!url) {
+      return NextResponse.json({ error: "No URL provided" }, { status: 400 });
+    }
+
+    console.log("Deleting file:", url);
+
+    await del(url);
+
+    return NextResponse.json({ message: "File deleted successfully" });
+  } catch (error) {
+    console.error("Delete failed:", error);
+    return NextResponse.json(
+      { error: "Delete failed" },
+      { status: 500 }
     );
   }
 }

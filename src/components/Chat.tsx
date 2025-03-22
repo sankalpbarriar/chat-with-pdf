@@ -9,6 +9,7 @@ import { orderBy, query, collection } from 'firebase/firestore';
 import { db } from '../../firebase';
 import { askQuestion } from '../../actions/askQuestion';
 import ChatMessage from './ui/ChatMessage';
+import { useToast } from '@/components/ui/use-toast';
 
 export type Message = {
     id?: string;
@@ -23,6 +24,7 @@ function Chat({ id }: { id: string }) {
     const [isPending, startTransition] = useTransition();
     const [messages, setMessages] = useState<Message[]>([]);
     const bottomOfChatRef = useRef<HTMLDivElement>(null);
+    const {toast} = useToast();
 
     const [snapshot, loading] = useCollection(
         user &&
@@ -89,8 +91,15 @@ function Chat({ id }: { id: string }) {
         startTransition(async () => {
             const { success, message } = await askQuestion(id, q);
 
+            console.log("DEBUG 1",success,message)
+
             if (!success) {
                 //toast..
+                toast({
+                    variant:"destructive",
+                    title:"Error",
+                    description:message,
+                })
 
                 setMessages((prev) =>
                     prev.slice(0, prev.length - 1).concat([

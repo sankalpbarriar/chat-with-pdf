@@ -4,32 +4,58 @@ An **AI-Powered Interactive Document Chat Application** that enables users to up
 
 ---
 
+## 🌐 Live Demo
+
+👉 [Visit PDF-Speek-Pro Live](https://pdf-speek-pro.vercel.app)
+
+## 💳 Test Card Details (For Stripe Payments)
+
+Use the following **Stripe test card** during checkout:
+
+| Card Info     | Value                |
+|---------------|----------------------|
+| **Card Number** | `4000 0035 6000 0008` |
+| **Expiry**      | `any`              |
+| **CVC**         | `any`              |
+
+> 💡 These credentials are for **testing only** and will **not make real charges**.
+
 ## 📸 Screenshots
 
-<img width="623" alt="PDF-Speek-Pro" src="https://github.com/user-attachments/assets/07eba5fd-237c-4dff-ad82-11f54f45f9d1" />
-<img width="623" alt="Screenshot" src="https://github.com/user-attachments/assets/d3562c08-917f-454b-a89a-5c0fd9f28094" />
+### 🖼️ Interface Previews
+
+| **PDF Upload Model** | **Chat Interface** |
+|---------------------|--------------------|
+| <img width="400" alt="PDF Upload Page" src="https://github.com/user-attachments/assets/07eba5fd-237c-4dff-ad82-11f54f45f9d1" /> | <img width="400" alt="Chat Interface" src="https://github.com/user-attachments/assets/0b5b7e7a-bf47-49c6-8966-38c3fce5e32b" /> |
+
+| **Subscription Model** | **Upload Preview** |
+|--------------------|--------------------|
+| <img width="400" alt="Full Chat View" src="https://github.com/user-attachments/assets/d3562c08-917f-454b-a89a-5c0fd9f28094" /> | <img width="400" alt="Upload Preview" src="https://github.com/user-attachments/assets/02e77568-9058-4ad0-8561-f6f7b8580e75" /> |
+
+| **My Documents** | **Payment Page** |
+|---------------|------------------|
+| <img width="400" alt="Auth Page" src="https://github.com/user-attachments/assets/8942c520-e48b-4dec-9155-e68137200912" /> | <img width="400" alt="Payment Page" src="https://github.com/user-attachments/assets/3747f316-6c37-40ce-811c-6f757abae927" /> |
 
 ---
 
-## 🚀 Features
 
-✅ **AI-Powered Document Interaction** - Upload PDFs and ask questions about their content.
-✅ **Automatic Embeddings Generation** - Uses advanced AI to process and understand the document.
-✅ **Fast & Accurate Responses** - Provides precise answers based on the document’s content.
-✅ **Secure Authentication** - Uses Clerk for user authentication and session management.
-✅ **Modern UI** - Built with ShadCN for a clean and interactive design.
-✅ **Serverless & Scalable** - Deployed on Next.js with Firebase for seamless scalability.
+✅ **AI-Powered Document Interaction** - Upload PDFs and ask questions about their content  
+✅ **Automatic Embeddings Generation** - Uses advanced AI to process and understand the document  
+✅ **Fast & Accurate Responses** - Provides precise answers based on the document’s content  
+✅ **Secure Authentication** - Uses Clerk for user authentication and session management  
+✅ **Modern UI** - Built with ShadCN for a clean and interactive design  
+✅ **Serverless & Scalable** - Deployed on Next.js with Firebase for seamless scalability  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Next.js** - Server-side actions and API handling
-- **ShadCN** - Modern and responsive UI components
-- **LangChain & Gemini API** - AI-powered responses and embedding generation
-- **Clerk** - Secure user authentication & session management
-- **Firebase** - Cloud storage for user data and PDF references
-- **Pinecone DB** - storage to store AI embeddings in namespace
+- **Next.js** - Server-side rendering and API handling  
+- **ShadCN** - Beautiful and accessible UI components  
+- **LangChain & Gemini API** - For AI-powered responses and embeddings  
+- **Clerk** - User authentication and session management  
+- **Firebase** - File storage and hosting  
+- **Pinecone DB** - Vector database for storing document embeddings 
 
 ---
 
